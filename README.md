@@ -75,3 +75,23 @@ Kita menggunakan tcp.stream karena untuk mendapatkan konversasi dengan cepat, ke
 Click salah satu lalu click kanan -> follow -> TCP STREAM nanti muncul percakapan mereka<br>
 ![image](https://user-images.githubusercontent.com/81162174/191541028-c14cfa22-1864-4cf2-8df2-10554127ee11.png)
 
+### Soal 9
+Terdapat laporan adanya pertukaran file yang dilakukan oleh kedua mahasiswa dalam percakapan yang diperoleh, carilah file yang dimaksud! Untuk memudahkan laporan kepada atasan, beri nama file yang ditemukan dengan format [nama_kelompok].des3 dan simpan output file dengan nama “flag.txt”.
+### Jawaban
+File yang dimaksud pada soal ini berupa data dalam bentuk string. Terdapat clue pada soal, yaitu penyimpanan file dengan extension .des3, yang tak lain merupakan salah satu metode enkripsi sehingga data bisa berisi string yang telah  terenkripsi. Kita gunakan command tcp.stream eq 29 untuk menemukan file yang dimaksud, nilai eq 29 merupakan index dari file. Selanjutnya, kita simpan file dalam bentuk raw dan beri penamaan E04.des3.
+
+<img width="451" alt="Picture3" src="https://user-images.githubusercontent.com/96496752/191625037-efb46666-0391-4838-a8cd-a4272bb7ee98.png">
+
+### Soal 10
+Temukan password rahasia (flag) dari organisasi bawah tanah yang disebutkan di atas!
+### Jawaban
+Pada soal 8 kita telah menemukan pesan percakapan dua mahasiswa. Salah satu topik pembicaraan keduanyan, yaitu mengenai password. Password yang dimaksud adalah password / key untuk dekripsi .des3 dari file yang telah kita peroleh pada soal 9. Langkah - langkah yang dilakukan untuk melakukan deskripsi adalah sebagai berikut,
+
+1. Membuka cmd / git bash/ terminal lain. Kelompok kami menggunakan cmd dengan ketentuan telah mendownload openssl.
+2. Gunakan command [openssl des3 -d -in (nama file input) -out (nama file output)]
+3. kemudian masukkan password deskripsi, yaitu 'nakano' sesuai dengan isi percakapan soal 8
+4. lihat file output, maka diperoleh password rahasia yang dimaksud. Yaitu "JaRkOm2022{8uK4N_CtF_k0k_h3h3h3}"
+
+![Picture2](https://user-images.githubusercontent.com/96496752/191625008-419c4f28-3d9a-46f4-87be-f43fc205301d.png)
+![Picture1](https://user-images.githubusercontent.com/96496752/191625031-ab0a25b0-fcba-4970-9730-37571c312c42.png)
+
