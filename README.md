@@ -38,3 +38,10 @@ Filter sehingga wireshark hanya mengambil paket yang berasal dari port 21!
 ### Jawaban
 Untuk menampilkan paket yang berasal dari port 21 dapat dilakukan filter `tcp.srcport == 21`</br></br>
 <img width="564" alt="image" src="https://user-images.githubusercontent.com/87472849/191529528-bf10a16c-10af-45a2-ad2b-251f28419123.png">
+
+### Soal 5
+Filter sehingga wireshark hanya mengambil paket yang berasal dari port 443!
+
+### Jawaban
+Untuk menampilkan paket yang berasal dari port 443 dapat dilakukan filter `tcp.srcport == 443`</br></br>
+<img width="563" alt="image" src="https://user-images.githubusercontent.com/87472849/191530097-4dafa208-f026-4f84-98f1-5f04d771f6eb.png">
