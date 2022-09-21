@@ -55,3 +55,23 @@ Pertama perlu tahu dulu ip address dari lipi.go.id dengan cara ping pada command
 Dari gambar di atas didapatkan ip address lipi.go.id adalah 203.160.128.158. Kemudian filter dengan `ip.dst == 203.160.128.158`</br></br>
 <img width="565" alt="image" src="https://user-images.githubusercontent.com/87472849/191531254-720b0bc2-0043-49e2-873f-186338bc5c5a.png">
 
+### Soal 7
+Filter sehingga wireshark hanya mengambil paket yang berasal dari ip kalian!
+### Jawaban
+Pertama kita buka CMD, lalu ketik ipconfig<br>
+![image](https://user-images.githubusercontent.com/81162174/191536113-a82919e1-6a14-4252-9ca4-bf38902a8806.png)<br>
+Cari Ip anda di bagian Wireless LAN adapter WIFI di row IPv4 Address <br>
+![image](https://user-images.githubusercontent.com/81162174/191536623-55b809e8-ef0a-4167-8610-c36ba6ec4b79.png)<br>
+Lalu tekan Capture option dan tekan WIFI lalu masukan di captuure filter src host (IP kalian)<br>
+![image](https://user-images.githubusercontent.com/81162174/191537235-261981ab-b52b-42e2-b9d5-137e8966c12b.png)<br>
+
+
+### Soal 8
+Telusuri aliran paket dalam file .pcap yang diberikan, cari informasi berguna berupa percakapan antara dua mahasiswa terkait tindakan kecurangan pada kegiatan praktikum.<br> Percakapan tersebut dilaporkan menggunakan protokol jaringan dengan tingkat keandalan yang tinggi dalam pertukaran datanya sehingga kalian perlu menerapkan filter dengan protokol yang tersebut.<br>
+### Jawaban
+Gunakan command tcp.stream eq 12 untuk menemukan percakapan antar host yang diinginkan.<br> 
+Kita menggunakan tcp.stream karena untuk mendapatkan konversasi dengan cepat, kenapa 12 karena index percakapan mereka berada di index 12<br>
+![image](https://user-images.githubusercontent.com/81162174/191540837-a8f06f5b-89e4-43c7-a0cc-ce3df60f546d.png)<br>
+Click salah satu lalu click kanan -> follow -> TCP STREAM nanti muncul percakapan mereka<br>
+![image](https://user-images.githubusercontent.com/81162174/191541028-c14cfa22-1864-4cf2-8df2-10554127ee11.png)
+
