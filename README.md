@@ -45,3 +45,13 @@ Filter sehingga wireshark hanya mengambil paket yang berasal dari port 443!
 ### Jawaban
 Untuk menampilkan paket yang berasal dari port 443 dapat dilakukan filter `tcp.srcport == 443`</br></br>
 <img width="563" alt="image" src="https://user-images.githubusercontent.com/87472849/191530097-4dafa208-f026-4f84-98f1-5f04d771f6eb.png">
+
+### Soal 6
+Filter sehingga wireshark hanya menampilkan paket yang menuju ke lipi.go.id !
+
+### Jawaban
+Pertama perlu tahu dulu ip address dari lipi.go.id dengan cara ping pada command prompt sebagai berikut</br></br>
+<img width="400" alt="image" src="https://user-images.githubusercontent.com/87472849/191530702-695d58d2-a7a0-4a0c-92e5-067964e88c90.png"></br></br>
+Dari gambar di atas didapatkan ip address lipi.go.id adalah 203.160.128.158. Kemudian filter dengan `ip.dst == 203.160.128.158`</br></br>
+<img width="565" alt="image" src="https://user-images.githubusercontent.com/87472849/191531254-720b0bc2-0043-49e2-873f-186338bc5c5a.png">
+
