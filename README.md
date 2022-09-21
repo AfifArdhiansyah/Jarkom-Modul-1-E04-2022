@@ -24,3 +24,10 @@ Pertama filter `http contains “monta.if.its.ac.id”`</br></br>
 Dari gambar di atas terdapat `detailTopik/194`. Lalu filter dengan `http` dan cari `text/html` di bawah `detailTopik/194`. Dilihat dari paket data maka akan ditemukan judul TA yaitu `Evaluasi unjuk kerja User Space Filesystem`</br></br>
 <img width="565" alt="image" src="https://user-images.githubusercontent.com/87472849/191515135-51cfa82a-452c-4535-a87e-222d83162251.png"></br>
 <img width="560" alt="image" src="https://user-images.githubusercontent.com/87472849/191515240-08e48cae-3d17-4f5c-9611-ddc377e45f6e.png">
+
+### Soal 3
+Filter sehingga wireshark hanya menampilkan paket yang menuju port 80!
+
+### Jawaban
+Untuk menampilkan paket yang menuju port 80 dapat dilakukan filter `tcp.dstport == 80`</br></br>
+<img width="562" alt="image" src="https://user-images.githubusercontent.com/87472849/191528872-a5e3e836-6601-49cf-9347-55e1577407bd.png">
