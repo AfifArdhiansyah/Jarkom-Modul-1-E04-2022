@@ -69,11 +69,18 @@ Lalu tekan Capture option dan tekan WIFI lalu masukan di captuure filter src hos
 ### Soal 8
 Telusuri aliran paket dalam file .pcap yang diberikan, cari informasi berguna berupa percakapan antara dua mahasiswa terkait tindakan kecurangan pada kegiatan praktikum.<br> Percakapan tersebut dilaporkan menggunakan protokol jaringan dengan tingkat keandalan yang tinggi dalam pertukaran datanya sehingga kalian perlu menerapkan filter dengan protokol yang tersebut.<br>
 ### Jawaban
-Gunakan command tcp.stream eq 12 untuk menemukan percakapan antar host yang diinginkan.<br> 
+Terdapat tiga buah pesan rahasia yang ditemukan. Pertama, gunakan command tcp.stream eq 12 untuk menemukan percakapan antar host yang diinginkan.<br> 
 Kita menggunakan tcp.stream karena untuk mendapatkan konversasi dengan cepat, kenapa 12 karena index percakapan mereka berada di index 12<br>
 ![image](https://user-images.githubusercontent.com/81162174/191540837-a8f06f5b-89e4-43c7-a0cc-ce3df60f546d.png)<br>
 Click salah satu lalu click kanan -> follow -> TCP STREAM nanti muncul percakapan mereka<br>
 ![image](https://user-images.githubusercontent.com/81162174/191541028-c14cfa22-1864-4cf2-8df2-10554127ee11.png)
+
+Dengan menggunakan langkah yang sama, kita akan mencari percakapan rahasia lainnya. Selanjutnya, gunakan command tcp.stream eq 41 maka ditemukan percakapan yang kedua
+![Screenshot 2022-09-22 193027](https://user-images.githubusercontent.com/96496752/191747947-e0a5b609-fc22-4663-ac59-53519b843430.jpg)
+
+Terakhir, gunakan command tcp.stream eq 90 maka ditemukan percakapan yang ketiga
+![Screenshot 2022-09-22 193108](https://user-images.githubusercontent.com/96496752/191748061-53aedac3-ca24-4e45-a8ca-d0e59dd95dbe.jpg)
+
 
 ### Soal 9
 Terdapat laporan adanya pertukaran file yang dilakukan oleh kedua mahasiswa dalam percakapan yang diperoleh, carilah file yang dimaksud! Untuk memudahkan laporan kepada atasan, beri nama file yang ditemukan dengan format [nama_kelompok].des3 dan simpan output file dengan nama “flag.txt”.
